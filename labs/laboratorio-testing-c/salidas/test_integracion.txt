@@ -1,0 +1,6 @@
+=== Tests de integracion ===
+[compra con descuento]
+  [OK]   total == 1150
+  [OK]   final == 1035
+
+--- 2/2 tests OK ---

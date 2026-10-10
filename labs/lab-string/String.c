@@ -18,8 +18,9 @@ int IsEmpty(const char *s) {
 /* ── GetLength — implementar siguiendo el README.md ─────────────────────── */
 
 int GetLength(const char *s) {
-    (void)s;
-    return -1;  /* reemplazar con la implementacion */
+    if (IsEmpty(s))
+        return 0;
+    return 1 + GetLength(s + 1);
 }
 
 /* ── AreEqual — tiene un bug, encontrarlo y corregirlo ──────────────────── */
@@ -31,7 +32,7 @@ int AreEqual(const char *s1, const char *s2) {
         s1++;
         s2++;
     }
-    return 1;  /* bug: ¿que pasa si una cadena es mas larga que la otra? */
+    return IsEmpty(s1) && IsEmpty(s2);  /* bug: ¿que pasa si una cadena es mas larga que la otra? */
 }
 
 /* ── AreDecimalDigits — tiene un bug, encontrarlo y corregirlo ───────────── */

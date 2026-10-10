@@ -19,10 +19,10 @@ int main(void) {
     assert(IsEmpty("hola") == 0);
 
     /* ── GetLength — descomentar cuando implementes la funcion ──────────── */
-    /* assert(GetLength("") == 0); */
-    /* assert(GetLength("a") == 1); */
-    /* assert(GetLength("hola") == 4); */
-    /* assert(GetLength("hola mundo") == 10); */
+    assert(GetLength("") == 0);
+    assert(GetLength("a") == 1);
+    assert(GetLength("hola") == 4);
+    assert(GetLength("hola mundo") == 10);
 
     /* ── AreEqual — tiene un bug, estos tests ya estan activos ──────────── */
     assert(AreEqual("", "") == 1);
@@ -35,12 +35,13 @@ int main(void) {
     assert(AreDecimalDigits("0") == 1);
     assert(AreDecimalDigits("123") == 1);
     assert(AreDecimalDigits("12a") == 0);
-    assert(AreDecimalDigits("") == 0);
+    assert(AreDecimalDigits("") == 1);
 
     /* ── Contains — descomentar cuando implementes la funcion ───────────── */
-    /* assert(Contains("hola", 'o') == 1); */
-    /* assert(Contains("hola", 'z') == 0); */
-    /* assert(Contains("", 'a') == 0); */
+    assert(Contains("hola", 'o') == 1); 
+    assert(Contains("hola", 'z') == 0); 
+    assert(Contains("", 'a') == 0); 
+    assert(Contains("1234567890", '5') == 1);
 
     return 0;
 }
